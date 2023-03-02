@@ -34,6 +34,12 @@ public class Jugador extends Empleado {
         return getSalarioBase()-costoPieza(getTallaPantalon())- costoPieza(getTallaCamiseta());
     }
 
+    @Override
+    public String toString() {
+        return getNombre()+" "+getApellido()+"edad"+getEdad()+" "+getNumDocumento()+" "+getTipoDocumento()+" "+getTallaCamiseta()+" "+getTallaPantalon()+" "+
+                getPeso()+" "+getPremios()+" "+Pago();
+    }
+
     public float getEstatura() {
         return Estatura;
     }

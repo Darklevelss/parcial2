@@ -27,6 +27,11 @@ public class Medico extends Empleado {
         return getSalarioBase()*t;
     }
 
+    @Override
+    public String toString() {
+        return getNombre()+" "+getApellido()+"edad"+getEdad()+" "+getNumDocumento()+" "+getTipoDocumento()+" "+getTipoMed()+" "+Pago();
+    }
+
     private void setPrecioHora() {
         if (tipoMed.equalsIgnoreCase("General")) {
             setSalarioBase(40000);

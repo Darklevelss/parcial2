@@ -106,14 +106,13 @@ public class Club {
         return t;
     }
     public Portero crearPortero(){
-        Portero p=new Portero();
+        Portero p=new Portero(tallas[new Random().nextInt(tallas.length)]);
 
         p.setNombre(nombr[new Random().nextInt(nombr.length)]);
         p.setApellido(apelllidos [new Random().nextInt(apelllidos.length)]);
         p.setEdad(new Random().nextInt());
         p.setTipoDocumento(tipoDocumento[new Random().nextInt(tipoDocumento.length)]);
         p.setNumDocumento(String.valueOf(new Random().nextInt()));
-        p.setTallaGuantes(tallas[new Random().nextInt(tallas.length)]);
         p.setTallaCamiseta(tallas[new Random().nextInt(tallas.length)]);
         p.setTallaPantalon(tallas[new Random().nextInt(tallas.length)]);
         p.setEstatura(new Random().nextFloat());

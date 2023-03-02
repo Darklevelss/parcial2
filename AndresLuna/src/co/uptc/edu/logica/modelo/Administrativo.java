@@ -38,4 +38,8 @@ public class Administrativo extends Empleado {
     public double Pago() {
         return (horasSemanales()*4*getSalarioBase()+(getExperienciaL()*(getSalarioBase()*4*horasSemanales()*0.2)));
     }
+    public String toString(){
+        return getNombre()+" "+getApellido()+"edad"+getEdad()+" "+getNumDocumento()+" "+getTipoDocumento()+" "+
+                Pago()+" "+getExperienciaL();
+    }
 }

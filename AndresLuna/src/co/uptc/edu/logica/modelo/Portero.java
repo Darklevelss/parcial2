@@ -3,8 +3,8 @@ package co.uptc.edu.logica.modelo;
 public class Portero extends Jugador{
     private String TallaGuantes;
 
-    public Portero() {
-        setSalarioBase(getSalarioBase()-costoPieza(getTallaGuantes()));
+    public Portero(String tallaGuantes) {
+        TallaGuantes = tallaGuantes;
     }
 
     public String getTallaGuantes() {

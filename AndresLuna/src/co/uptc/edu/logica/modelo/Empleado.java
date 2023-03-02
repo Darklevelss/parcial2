@@ -56,4 +56,5 @@ public abstract class Empleado {
         this.edad = edad;
     }
     public abstract double Pago();
+    public abstract String toString();
 }

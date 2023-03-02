@@ -13,6 +13,11 @@ public class Tecnico extends Empleado{
         return getSalarioBase()*0.885+(getSalarioBase()*0.885*porcentaje());
     }
 
+    @Override
+    public String toString() {
+        return getNombre()+" "+getApellido()+"edad"+getEdad()+" "+getNumDocumento()+" "+getTipoDocumento()+" "+getTipoTecnico()+" "+Pago();
+    }
+
     public String getTipoTecnico() {
         return TipoTecnico;
     }
