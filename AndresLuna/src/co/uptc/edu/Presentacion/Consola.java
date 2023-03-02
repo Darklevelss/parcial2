@@ -40,7 +40,9 @@ public class Consola {
                 mostrar();
                 break;
             case 3:
-
+                System.out.println("ingrese nombre");
+                String nombre= sc.nextLine();
+                mostrarSi(nombre);
             case 0:
                 System.out.println("bye");
                 break;
@@ -75,6 +77,37 @@ public class Consola {
             System.out.println(i.toString());
         }
 
+    }
+    private void mostrarSi(String nombre){
+        for (Administrativo i:
+                club.getAdministrativos()) {
+            if (nombre.equalsIgnoreCase(i.getNombre())){
+            System.out.println(i.toString());}
+        }
+        for (Campo i:
+                club.getCampos()) {
+            if (nombre.equalsIgnoreCase(i.getNombre())){
+                System.out.println(i.toString());}
+        }
+
+        for (Portero i:
+                club.getPorteros()) {
+            if (nombre.equalsIgnoreCase(i.getNombre())){
+                System.out.println(i.toString());}
+        }
+
+        for (Tecnico i:
+                club.getTecnicos()) {
+            if (nombre.equalsIgnoreCase(i.getNombre())){
+                System.out.println(i.toString());}
+
+        }
+        for (Medico i: club.getMedicos()
+        ) {
+            if (nombre.equalsIgnoreCase(i.getNombre())){
+                System.out.println(i.toString());}
+
+        }
     }
 
 
