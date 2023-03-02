@@ -2,9 +2,15 @@ package co.uptc.edu.logica.modelo;
 
 public class Tecnico extends Empleado{
     private String TipoTecnico;
-    private final double SALARIO=1000000;
+
 
     public Tecnico() {
+        setSalarioBase(10000000);
+    }
+
+    @Override
+    public double Pago() {
+        return getSalarioBase()*0.885+(getSalarioBase()*0.885*porcentaje());
     }
 
     public String getTipoTecnico() {
@@ -15,12 +21,14 @@ public class Tecnico extends Empleado{
         TipoTecnico = tipoTecnico;
     }
 
+private double porcentaje(){
+        if (TipoTecnico.equalsIgnoreCase("principal")){
+            return 0.1;
+        }else if  (TipoTecnico.equalsIgnoreCase("preparador")){
+            return 0.07;
 
+        }else{
+        return 0.02;}
+}
 
-
-
-    @Override
-    public double Pago() {
-        return SALARIO*0.885;
-    }
 }

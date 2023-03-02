@@ -3,14 +3,14 @@ package co.uptc.edu.logica.modelo;
 public abstract class Empleado {
     private String Nombre,Apellido,NumDocumento,TipoDocumento;
     private int edad;
-    private double Salario;
+    private double SalarioBase;
 
-    public double getSalario() {
-        return Salario;
+    public double getSalarioBase() {
+        return SalarioBase;
     }
 
-    public void setSalario(double salario) {
-        Salario = salario;
+    public void setSalarioBase(double salarioBase) {
+        SalarioBase = salarioBase;
     }
 
     public Empleado() {
@@ -55,6 +55,5 @@ public abstract class Empleado {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
     public abstract double Pago();
 }

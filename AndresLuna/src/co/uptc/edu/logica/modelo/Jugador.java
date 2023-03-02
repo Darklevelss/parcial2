@@ -2,31 +2,36 @@ package co.uptc.edu.logica.modelo;
 
 import java.util.ArrayList;
 
-public class Jugador extends Empleado{
+public class Jugador extends Empleado {
 
-    private float Estatura,Peso;
+    private float Estatura, Peso;
 
-    public Jugador() {
-        setSalario(1000000);
+    public String getTallaPantalon() {
+        return TallaPantalon;
     }
 
-    public double getPremios() {
-        return Premios;
+    public void setTallaPantalon(String tallaPantalon) {
+        TallaPantalon = tallaPantalon;
     }
 
-    public String getTallaUniforme() {
-        return TallaUniforme;
+    public String getTallaCamiseta() {
+        return TallaCamiseta;
     }
 
-    public void setTallaUniforme(String tallaUniforme) {
-        TallaUniforme = tallaUniforme;
+    public void setTallaCamiseta(String tallaCamiseta) {
+        TallaCamiseta = tallaCamiseta;
     }
 
-    private String TallaUniforme;
+    private String TallaPantalon, TallaCamiseta;
     private double Premios;
 
-    public void setPremios(double premios) {
-        Premios = premios;
+    public Jugador() {
+        setSalarioBase(1000000);
+    }
+
+    @Override
+    public double Pago() {
+        return getSalarioBase()-costoPieza(getTallaPantalon())- costoPieza(getTallaCamiseta());
     }
 
     public float getEstatura() {
@@ -45,8 +50,19 @@ public class Jugador extends Empleado{
         Peso = peso;
     }
 
-    @Override
-    public double Pago() {
-        return getSalario()+getPremios() ;
+
+    public double getPremios() {
+        return Premios;
+    }
+private double costoPieza(String talla){
+        if (talla.equalsIgnoreCase("S")||talla.equalsIgnoreCase("M")){
+            return 20000;
+        }else {
+            return 25000;
+        }
+
+}
+    public void setPremios(double premios) {
+        Premios = premios;
     }
 }

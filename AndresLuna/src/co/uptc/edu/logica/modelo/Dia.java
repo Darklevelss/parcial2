@@ -1,6 +1,6 @@
 package co.uptc.edu.logica.modelo;
 
-import java.time.LocalDateTime;
+
 
 public class Dia {
 private int HoraLlegada,HoraSalida;
@@ -23,5 +23,8 @@ private int HoraLlegada,HoraSalida;
 
     public void setHoraSalida(int horaSalida) {
         HoraSalida = horaSalida;
+    }
+    public int getHorasTrabajadas(){
+        return getHoraSalida()-getHoraLlegada();
     }
 }

@@ -8,8 +8,8 @@ public class Administrativo extends Empleado {
    ;
 
     public Administrativo() {
-        Horario=new ArrayList<>();
-        setSalario(100000);
+        Horario=new ArrayList<Dia>();
+        setSalarioBase(100000);
     }
 
     public int getExperienciaL() {
@@ -29,8 +29,13 @@ public class Administrativo extends Empleado {
         j+=getHorario().get(i).getHoraSalida()-getHorario().get(i).getHoraLlegada();}
         return j;
  }
+
+    public void setHorario(ArrayList<Dia> horario) {
+        Horario = horario;
+    }
+
     @Override
     public double Pago() {
-        return (horasSemanales()*getSalario()+(getExperienciaL()*(getSalario()*horasSemanales()*0.2)));
+        return (horasSemanales()*4*getSalarioBase()+(getExperienciaL()*(getSalarioBase()*4*horasSemanales()*0.2)));
     }
 }
